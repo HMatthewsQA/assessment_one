@@ -73,8 +73,14 @@ def one(input1, input2):
 
 def two(input):
 	string = input.lower()
-	sep = string.split('bert')
-	return ""
+	sep = 'bert'
+	x = string.count(sep)
+	check = ''
+	if x <= 1:
+		check = ''
+	else:
+		check = string[string.find(sep)+len(sep):string.rfind(sep)]
+	return check
 
 
 
@@ -172,6 +178,14 @@ def four(arg1):
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
+	largestring = input
+	mylist = largestring.split(',')
+	namelist = []
+	name = ''
+	for x in mylist:
+		if x == 'False':
+			namelist.append(x-2)
+	
 	return []
 
 	# <QUESTION 6>
